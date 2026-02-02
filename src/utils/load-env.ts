@@ -12,6 +12,7 @@ const EnvSchema = z.object({
   DATABASE_NAME: z.string(),
   DATABASE_HOST: z.string(),
   DATABASE_PORT: z.coerce.number(),
+  QWEN_API_KEY: z.string().min(1),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
@@ -20,8 +21,7 @@ let env: Env;
 
 try {
   env = EnvSchema.parse(process.env);
-}
-catch (error) {
+} catch (error) {
   console.error("Environment variable validation failed:", error);
   process.exit(1);
 }
