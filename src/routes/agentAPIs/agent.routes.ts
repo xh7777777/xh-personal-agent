@@ -1,6 +1,5 @@
-import { NotFoundSchema } from "@/utils/constants.js";
 import { createRoute } from "@hono/zod-openapi";
-import { jsonContent, jsonContentRequired } from "stoker/openapi/helpers";
+import { jsonContent } from "stoker/openapi/helpers";
 import { z } from "zod";
 
 export const testAgentConnect = createRoute({

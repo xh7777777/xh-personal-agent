@@ -1,5 +1,4 @@
 import { ChatAlibabaTongyi } from "@langchain/community/chat_models/alibaba_tongyi";
-import { HumanMessage } from "@langchain/core/messages";
 import env from "@/utils/load-env.js";
 
 // Default model is qwen-turbo
@@ -14,4 +13,4 @@ const qwenPlus = new ChatAlibabaTongyi({
   alibabaApiKey: env.QWEN_API_KEY, // In Node.js defaults to process.env.ALIBABA_API_KEY
 });
 
-export { qwenTurbo, qwenPlus };
+export { qwenPlus, qwenTurbo };

@@ -7,7 +7,7 @@ export const testAgentConnectHandler: AppRouteHandler<
 > = async (c) => {
   const response = await qwenTurbo.invoke("hello, world!");
 
-  console.log("Agent response:", response);
+  console.warn("Agent response:", response);
 
   if (!response) {
     return c.json({ message: "Failed to connect to agent" }, 500);

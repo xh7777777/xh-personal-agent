@@ -21,7 +21,8 @@ let env: Env;
 
 try {
   env = EnvSchema.parse(process.env);
-} catch (error) {
+}
+catch (error) {
   console.error("Environment variable validation failed:", error);
   process.exit(1);
 }
